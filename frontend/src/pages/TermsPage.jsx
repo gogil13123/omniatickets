@@ -76,7 +76,7 @@ const TermsPage = () => {
                         </div>
                     </div>
                     <h3 className="text-3xl font-black mb-4 font-orbitron uppercase tracking-widest text-white">დამატებითი კითხვები?</h3>
-                    <p className="text-light-purple/60 mb-10 max-w-md mx-auto font-medium">დაგვიკავშირდით სოციალურ ქსელებში ან ემაილზე:luka.gogilashvili.2@btu.edu.ge</p>
+                    <p className="text-light-purple/60 mb-10 max-w-md mx-auto font-medium">დაგვიკავშირდით სოციალურ ქსელებში ან ემაილზე:             luka.gogilashvili.2@btu.edu.ge</p>
                     <a
                         href="mailto:luka.gogilashvili.2@btu.edu.ge"
                         className="inline-flex items-center space-x-3 bg-white text-black px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-xs hover:scale-105 transition-all shadow-premium"

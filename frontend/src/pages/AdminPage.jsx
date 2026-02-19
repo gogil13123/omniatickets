@@ -439,7 +439,7 @@ const AdminPage = () => {
                         </table>
                     </div>
                     <div className="p-6 md:p-8 border-t border-white/5 bg-white/[0.01] text-center">
-                        <p className="text-[10px] font-black uppercase tracking-widest text-light-purple/20 italic">Omnia Admin System v2.0 - Secured with AI Protocol</p>
+                        <p className="text-[10px] font-black uppercase tracking-widest text-light-purple/20 italic">Omnia Admin System v2.0 - @e0xv</p>
                     </div>
                 </motion.div>
             </div>

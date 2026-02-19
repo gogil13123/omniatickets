@@ -50,7 +50,7 @@ const SecurityPage = () => {
                             </div>
                         </div>
                         <h1 className="text-3xl md:text-5xl font-black mb-3 md:mb-4 font-orbitron text-gradient uppercase tracking-tighter">ბილეთის ვერიფიკაცია</h1>
-                        <p className="text-light-purple/40 font-black uppercase tracking-widest text-[8px] md:text-[10px]">Security Protocol / Scan Confirmation Code</p>
+                        <p className="text-light-purple/40 font-black uppercase tracking-widest text-[8px] md:text-[10px]">Security Protocol @e0xv / Scan Confirmation Code</p>
                     </div>
 
                     <form onSubmit={handleVerify} className="space-y-6 md:space-y-8 relative z-10">

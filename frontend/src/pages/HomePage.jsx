@@ -43,7 +43,7 @@ const HomePage = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-4xl sm:text-7xl md:text-9xl font-black mb-6 md:mb-8 tracking-tighter font-orbitron leading-[1.1]"
+                        className="text-5xl sm:text-7xl md:text-9xl font-black mb-6 md:mb-8 tracking-tighter font-orbitron leading-[1.1]"
                     >
                         OMNIA <br />
                         <span className="text-gradient">AFTER LECTURE</span>
@@ -53,7 +53,7 @@ const HomePage = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-lg md:text-2xl text-light-purple/60 mb-10 md:mb-12 max-w-2xl mx-auto font-medium leading-relaxed"
+                        className="text-sm md:text-2xl text-light-purple/60 mb-10 md:mb-12 max-w-2xl mx-auto font-medium leading-relaxed"
                     >
                         აღმოაჩინე გართობის ახალი განზომილება. 2026 წლის ყველაზე ექსკლუზიური ღამე გელოდება.
                     </motion.p>
