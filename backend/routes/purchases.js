@@ -6,10 +6,18 @@ const Purchase = require('../models/Purchase');
 const Ticket = require('../models/Ticket');
 const auth = require('../middleware/auth');
 
+const fs = require('fs');
+
+// Ensure uploads directory exists
+const uploadDir = path.join(__dirname, '../uploads');
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+}
+
 // Multer storage
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/');
+        cb(null, uploadDir);
     },
     filename: function (req, file, cb) {
         cb(null, Date.now() + path.extname(file.originalname));
@@ -20,7 +28,21 @@ const upload = multer({ storage: storage });
 // @route   POST api/purchases
 // @desc    Submit a purchase request
 // @access  Public
-router.post('/', upload.single('receipt'), async (req, res) => {
+router.post('/', (req, res, next) => {
+    upload.single('receipt')(req, res, function (err) {
+        if (err instanceof multer.MulterError) {
+            console.error('Multer Error:', err);
+            return res.status(400).json({ msg: 'File upload error: ' + err.message });
+        } else if (err) {
+            console.error('Unknown Upload Error:', err);
+            return res.status(500).json({ msg: 'Internal server error during upload' });
+        }
+        next();
+    });
+}, async (req, res) => {
+    console.log('Purchase Request Received');
+    console.log('File:', req.file);
+    console.log('Body:', req.body);
     const { fullName, personalId, email, ticketQuantity, paymentMethod } = req.body;
     try {
         const ticketSettings = await Ticket.findOne({ isActive: true });
